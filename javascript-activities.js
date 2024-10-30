@@ -15,11 +15,12 @@ HINT: Use * to multiply two numbers, and feel free to use multiple
 console.log statements. Test your function when you're done!
 */
 function logTrip(tripName, tripLen, costPerDay){
-
+    console.log("Trip Name: " + tripName);
+    console.log("Total Cost: $" + tripLen * costPerDay);
 }
 
 /* Uncomment the line below to call the function. */
-// logTrip("Thanksgiving in Japan", 1, 500);
+logTrip("Thanksgiving in Japan", 1, 500);
 
 
 /*
@@ -37,8 +38,11 @@ let tripObject = {
 };
 
 /* EDIT TRIPOBJECT HERE: */
+tripObject.tripLen = 3;
+tripObject.costPerDay = 650;
+Object.defineProperty(tripObject, "numTravelers", {value:4});
 
-
+console.log(tripObject);
 
 ///////////////////////////
 
@@ -65,12 +69,20 @@ const tripObject2 = {
     numTravellers: 6,
 }
 /* MAKE YOUR FUNCTION HERE */
-
+function cheaperTrip(trip1, trip2) {
+    var trip1Cost = trip1.tripLen * trip1.costPerDay / trip1.numTravellers;
+    var trip2Cost = trip2.tripLen * trip2.costPerDay / trip2.numTravellers;
+    if(trip1Cost > trip2Cost) {
+        return trip2Cost;
+    } else {
+        return trip1Cost;
+    }
+}
 
 ///////////////////////////
 
 /* Uncomment the below line to test out your function */
-// console.log(cheaperTrip(tripObject1, tripObject2));
+console.log(cheaperTrip(tripObject1, tripObject2));
 
 /*
 Below, we've created an array of travel destinations. These
@@ -95,7 +107,14 @@ const destinations = [
 ]
 
 /* MAKE YOUR FUNCTION HERE */
-
+let isTripIncluded = (destinations, targetDestination) => {
+    for(i of destinations) {
+        if(i === targetDestination) {
+            return true;
+        }
+    }
+    return false;
+}
 
 ///////////////////////////
 
@@ -103,7 +122,7 @@ const destinations = [
     Uncomment the below line to test out your function.
     Feel free to test whatever target destination you'd like.
 */
-// console.log(isTripIncluded(destinations, ""));
+console.log(isTripIncluded(destinations, ""));
 
 
 /*
@@ -141,8 +160,16 @@ and handles success and errors using .then/catch.
 */ 
 
 // YOUR CODE HERE
+async function fetchExchangeRate(currency1, currency2) {
+    let result = getExchangeRate(currency1, currency2)
+    result.then((successMessage) => {
+        console.log(successMessage);
+    }).catch((errorMessage) => {
+        console.log(errorMessage);
+    })
+}
 
 // Example calls:
-// fetchExchangeRate('USD', 'EUR')
-// fetchExchangeRate('USD', 'GBP')  // This should trigger an error
+fetchExchangeRate('USD', 'EUR')
+fetchExchangeRate('USD', 'GBP')  // This should trigger an error
 
