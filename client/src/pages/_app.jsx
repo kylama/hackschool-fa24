@@ -1,4 +1,5 @@
 // Import Navbar from the components folder
+import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 

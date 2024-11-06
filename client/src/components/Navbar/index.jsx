@@ -9,6 +9,10 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.title}>
+<<<<<<< HEAD
+=======
+        {/* Bonus: add a logo image with the Image tag that comes with Next.js: https://nextjs.org/docs/pages/api-reference/components/image */}
+>>>>>>> upstream/part4
         <Image width={50} height={50} src="/travel.png"></Image>
         <Link href="/">HackTravels</Link>
       </div>
@@ -17,7 +21,11 @@ const Navbar = () => {
         <Link href="/addActivity">Add Trip Activity</Link>
       </div>
     </div>
+<<<<<<< HEAD
   );  
+=======
+  );
+>>>>>>> upstream/part4
 };
 
 export default Navbar;
