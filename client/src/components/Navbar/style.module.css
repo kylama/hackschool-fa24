@@ -43,11 +43,7 @@
     - Add spacing between tabs
     */
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
-=======
-    gap: 10px;
->>>>>>> upstream/part4
 }
 
 .navButtons a {
@@ -65,11 +61,7 @@
     color: white;
     font-size: 20px;
     text-decoration: none;
-<<<<<<< HEAD
     margin: 2px;
 }
 
 
-=======
-}
->>>>>>> upstream/part4
