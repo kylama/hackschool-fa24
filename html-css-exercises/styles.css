@@ -16,7 +16,7 @@ select, input, textarea {
     sans-serif;
 }
 
-/* Navbar Styling */
+/* Activity 2a: Navbar Styling */
 
 #navbar {
     /*
@@ -69,8 +69,9 @@ h2 {
     text-align: center;
 }
 
-/* Trips Section Styling */
+/* Activity 2b: Trips Section Styling */
 .tripsContainer {
+<<<<<<< HEAD
     /*
     - Allow for a flexible box layout where child elements (trip boxes) will be aligned
     - Center the trip boxes horizontally within the container
@@ -79,6 +80,16 @@ h2 {
     - Set the container width to 80% of its parent
     - Add a 20px space between each trip box
     */
+=======
+/*
+  - Allow for a flexible box layout where child elements (trip boxes) will be aligned
+  - Center the trip boxes horizontally within the container
+  - Center the trip boxes vertically within the container
+  - Center the container horizontally within its parent
+  - Set the container width to 80% of its parent
+  - Add a 20px space between each trip box
+*/
+>>>>>>> bfea9bb2cf15f7d7f162a943b9d41bf5917f4864
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,6 +100,7 @@ h2 {
 
   
 .tripBox {
+<<<<<<< HEAD
     /* 
     - Make each trip box take an equal portion of the container space
     - Add a 20px padding inside each trip box for spacing content
@@ -97,12 +109,26 @@ h2 {
     - Round the corners of each trip box by 8px
     - Add a shadow around each trip box
     */
+=======
+/* 
+  - Make each trip box take an equal portion of the container space
+  - Add a 20px padding inside each trip box for spacing content
+  - Give the trip box a light orange background
+  - Center the text inside each trip box
+  - Round the corners of each trip box by 8px
+  - Add a shadow around each trip box
+*/
+>>>>>>> bfea9bb2cf15f7d7f162a943b9d41bf5917f4864
     flex: 1;
     padding: 20px;
     background-color: #f7cda3;
     text-align: center;
     border-radius: 8px;
+<<<<<<< HEAD
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+=======
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+>>>>>>> bfea9bb2cf15f7d7f162a943b9d41bf5917f4864
 }
 
 /* Upload Page Section */
